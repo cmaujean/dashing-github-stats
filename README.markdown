@@ -7,6 +7,7 @@
    the github.yml and LICENSE files into the root of your dashing project
    (rsync works well for this.)
 1. Edit the github.yml file to configure the widget.
+1. Add ``` gem 'octokit' ``` to your Gemfile and run ``` bundle install ```
 1. Add the following to your dashboard.erb file, and adjust the attributes to
    place it where you want:
 ```
