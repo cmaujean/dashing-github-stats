@@ -3,7 +3,7 @@
 ## Setup
 
 1. Copy the contents of the jobs, widgets and public folder contents into the (you guessed it)
-   the jobs, widgets and public folders in your dashing project and
+   the jobs, widgets and assets/images folders in your dashing project and
    the github.yml and LICENSE files into the root of your dashing project
    (rsync works well for this.)
 1. Edit the github.yml file to configure the widget.
