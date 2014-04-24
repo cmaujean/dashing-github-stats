@@ -1,0 +1,37 @@
+.widget.widget-github-stats.github_stats {
+  vertical-align: text-top;
+  background-color: #DDDDDD;
+  background-image: url("/GitHub-Mark-Light-120px-plus.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  color: #111111;
+  padding: 10px;
+  font-size: 1.5em;
+  .repo_name {
+    font-weight: bolder;
+  }
+}
+.main {
+  text-align: left;
+  color: #000000;
+}
+
+.label {
+  display: inline-block;
+  font-size: 1em;
+  padding: 10px;
+  width: 45%;
+  text-align: right;
+}
+
+.count {
+  display: inline-block;
+  width: 35%;
+  font-size: 1em;
+  padding: 10px;
+  text-align: left;
+  font-weight: bolder;
+}
