@@ -4,6 +4,7 @@
   background-image: url("/assets/GitHub-Mark-Light-120px-plus.png");
   background-size: contain;
   background-repeat: no-repeat;
+  line-height: 1em;
 }
 
 .title {
@@ -28,6 +29,15 @@
 }
 
 .count {
+  display: inline-block;
+  width: 35%;
+  font-size: 1em;
+  padding: 10px;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.date {
   display: inline-block;
   width: 35%;
   font-size: 1em;

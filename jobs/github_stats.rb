@@ -1,4 +1,6 @@
 require 'octokit'
+require 'action_view'
+include ActionView::Helpers::DateHelper
 
 config = YAML::load_file('github.yml')
 
@@ -19,6 +21,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
     pulls: pulls,
     forks: r.forks,
     watchers: r.subscribers_count,
-    stargazers: r.stargazers_count
+    stargazers: r.stargazers_count,
+    activity: time_ago_in_words(r.updated_at).capitalize
   })
 end
