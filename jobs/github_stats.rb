@@ -18,7 +18,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
 
     send_event(name, {
       repo: name,
-      issues: r.open_issues_count,
+      issues: r.open_issues_count - pulls,
       pulls: pulls,
       forks: r.forks,
       watchers: r.subscribers_count,
