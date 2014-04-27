@@ -12,16 +12,18 @@ end
 
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
-  r = Octokit::Client.new.repository(config["repo"])
-  pulls = Octokit.pulls(config["repo"], :state => 'open').count
+  config["repos"].each do |name|
+    r = Octokit::Client.new.repository(name)
+    pulls = Octokit.pulls(name, :state => 'open').count
 
-  send_event('github_stats', {
-    repo: config["repo"],
-    issues: r.open_issues_count,
-    pulls: pulls,
-    forks: r.forks,
-    watchers: r.subscribers_count,
-    stargazers: r.stargazers_count,
-    activity: time_ago_in_words(r.updated_at).capitalize
-  })
+    send_event(name, {
+      repo: name,
+      issues: r.open_issues_count,
+      pulls: pulls,
+      forks: r.forks,
+      watchers: r.subscribers_count,
+      stargazers: r.stargazers_count,
+      activity: time_ago_in_words(r.updated_at).capitalize
+    })
+  end
 end
