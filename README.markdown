@@ -17,7 +17,7 @@ repos:
 login: my_github_user
 password: my_github_password
 ```
-1. Add `octokit` and `action_view` gems to your Gemfile and run `bundle install`
+1. Add `octokit` and `actionview` gems to your Gemfile and run `bundle install`
 1. Add the following to your dashboard.erb file, and adjust the attributes to
    place it where you want. The data-id value is the same as your repository name:
 ```html
