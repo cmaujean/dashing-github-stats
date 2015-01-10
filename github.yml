@@ -1,3 +1,8 @@
-repo: Org/Repo
-login: Your_github_username
-password: Your_github_password
+repos: 
+  - dotcloud/docker
+  - erikh/ruby-dbi
+  - rack/rack
+  - torvalds/linux
+
+login: my_github_user
+password: my_github_password
